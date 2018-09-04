@@ -1,0 +1,12 @@
+K-fold cross validation
+（交差確認）の仕方。
+
+from sklearn.cross_validation import cross_val_score
+scores = cross_val_score(classifier, X, y, cv=5)
+print np.mean(scores)
+
+簡単な方法
+
+決定木やSVMなどのモデルをとりあえず生成します。まだデータは入れません。学習させません。
+交差検証の関数にぶちこみます。
+おおよその引数は(学習モデル,学習用データセット,正解ラベル,分割数cv)
